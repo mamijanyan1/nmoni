@@ -1,0 +1,33 @@
+{
+  "entities": {
+    "WorkspaceState": {
+      "title": "WorkspaceState",
+      "description": "The persistent complete database state containing SMM workspace settings, tasks, and bots logs.",
+      "type": "object",
+      "properties": {
+        "isUnconfigured": {
+          "type": "boolean",
+          "description": "Flag to check if the workspace is freshly generated"
+        },
+        "tgBotToken": {
+          "type": "string",
+          "description": "Custom Telegram Bot API Token"
+        },
+        "adminPin": {
+          "type": "string",
+          "description": "Custom SMM Workspace 4-digit PIN code"
+        },
+        "tgChatIds": {
+          "type": "object",
+          "description": "Map representing individual SMM employee telegram chat IDs"
+        }
+      }
+    }
+  },
+  "firestore": {
+    "/workspaces/{workspaceId}": {
+      "schema": "WorkspaceState",
+      "description": "Stores the SMM workspace custom configurations, lists of SMM tasks, SMM members data, broadcast messages, and employee interactive bot conversation logs."
+    }
+  }
+}

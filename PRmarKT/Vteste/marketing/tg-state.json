@@ -1,0 +1,296 @@
+{
+  "isUnconfigured": false,
+  "teamMembers": [
+    {
+      "id": "user_1779713984314",
+      "name": "Moni Antonyan",
+      "role": "Команда Маркетинга ⚡",
+      "avatarCode": "🥐",
+      "color": "bg-indigo-100 text-indigo-700 border-indigo-200/50",
+      "username": "@moni_antonyan"
+    },
+    {
+      "id": "user_1779713992112",
+      "name": "Alll",
+      "role": "Команда Маркетинга ⚡",
+      "avatarCode": "🦊",
+      "color": "bg-purple-100 text-purple-700 border-purple-200/50",
+      "username": ""
+    },
+    {
+      "id": "user_1779715341323",
+      "name": "Mariam",
+      "role": "Команда Маркетинга ⚡",
+      "avatarCode": "👤",
+      "color": "bg-purple-100 text-purple-700 border-purple-200/50",
+      "username": "@Mariam"
+    },
+    {
+      "id": "user_1779715381041",
+      "name": "Anushik",
+      "role": "Команда Маркетинга ⚡",
+      "avatarCode": "👤",
+      "color": "bg-purple-100 text-purple-700 border-purple-200/50",
+      "username": "@Anushik"
+    },
+    {
+      "id": "user_1779884851526",
+      "name": "Gayush",
+      "role": "Команда Маркетинга ⚡",
+      "avatarCode": "👤",
+      "color": "bg-amber-100 text-amber-700 border-amber-200/50",
+      "username": "@Gayush"
+    },
+    {
+      "id": "user_1448901787",
+      "name": "Maral",
+      "role": "Команда Маркетинга ⚡",
+      "avatarCode": "✨",
+      "color": "bg-rose-100 text-rose-700 border-rose-200/50",
+      "username": ""
+    }
+  ],
+  "tasks": [
+    {
+      "title": "FONT minchev urbat",
+      "description": "Sarqel fontery idealakan minch urbat",
+      "assignedTo": [
+        "user_1779713992112"
+      ],
+      "deadline": "2026-05-29T13:00:00.000Z",
+      "reminderType": "custom",
+      "reminders": [
+        {
+          "time": "2026-05-28T08:35:00.000Z",
+          "sent": false
+        },
+        {
+          "time": "2026-05-28T11:35:00.000Z",
+          "sent": false
+        }
+      ],
+      "attachedFiles": [],
+      "id": "task-1779903407915",
+      "createdAt": "2026-05-27T17:36:47.915Z",
+      "completions": {
+        "user_1779713992112": {
+          "completed": false,
+          "status": "pending"
+        }
+      }
+    },
+    {
+      "id": "task-rec-2",
+      "title": "Նկարել 3 ոչի",
+      "description": "Shoot and edit 3 reels/TikToks on the topic '3 things you should NEVER do' (3 ոչ-եր) in relation to our services. Ensure the transitions are smooth. Պատրաստել սցենարները նախապես, նկարել ու ուղարկել խմբագրման։",
+      "assignedTo": [
+        "user_1779715341323"
+      ],
+      "deadline": "2026-05-29T15:00:00.000Z",
+      "reminderType": "classic",
+      "createdAt": "2026-05-27T11:30:00.000Z",
+      "attachedFiles": [],
+      "completions": {
+        "user_1779715341323": {
+          "completed": false,
+          "status": "pending"
+        }
+      },
+      "reminders": []
+    },
+    {
+      "id": "task-rec-3",
+      "title": "Նկարել Սերվիսի սթորիները",
+      "description": "Create, film, or design high-converting stories explaining our key services. Include interactive stickers (polls, Q&A). Նկարել սպասարկման ընթացքը, ցույց տալ մանրամասները և ակտիվացնել լսարանին հարցումների միջոցով։",
+      "assignedTo": [
+        "user_1779715381041"
+      ],
+      "deadline": "2026-05-30T12:00:00.000Z",
+      "reminderType": "classic",
+      "createdAt": "2026-05-27T09:15:00.000Z",
+      "attachedFiles": [],
+      "completions": {
+        "user_1779715381041": {
+          "completed": false,
+          "status": "pending"
+        }
+      },
+      "reminders": [
+        {
+          "time": "h-1",
+          "sent": true
+        },
+        {
+          "time": "h-0",
+          "sent": true
+        }
+      ]
+    },
+    {
+      "id": "task-rec-4",
+      "title": "Նկարել Մարկետինգիները",
+      "description": "Shoot video content focusing on our brand's marketing side. This includes brief interviews, behind-the-scenes footage. Նկարահանել մարքեթինգային թիմի աշխատանքային պրոցեսը և ներկայացնել հետաքրքիր անկյունից։",
+      "assignedTo": [
+        "user_1779884851526"
+      ],
+      "deadline": "2026-05-30T17:00:00.000Z",
+      "reminderType": "classic",
+      "createdAt": "2026-05-27T14:00:00.000Z",
+      "attachedFiles": [],
+      "completions": {
+        "user_1779884851526": {
+          "completed": false,
+          "status": "pending"
+        }
+      },
+      "reminders": [
+        {
+          "time": "h-6",
+          "sent": true
+        },
+        {
+          "time": "h-1",
+          "sent": true
+        }
+      ]
+    },
+    {
+      "id": "task-rec-5",
+      "title": "Նկարել 3 հոլ",
+      "description": "Shoot 3 dynamic short-form videos (reels/shorts) focusing on our top-selling products. Use engaging hooks. Նկարել 3 կարճ հոլովակ (reels), որոնք կբարձրացնեն էջի դիտելիությունը։",
+      "assignedTo": [
+        "user_1448901787"
+      ],
+      "deadline": "2026-05-28T16:00:00.000Z",
+      "reminderType": "classic",
+      "createdAt": "2026-05-27T15:20:00.000Z",
+      "attachedFiles": [],
+      "completions": {
+        "user_1448901787": {
+          "completed": false,
+          "status": "pending"
+        }
+      },
+      "reminders": []
+    }
+  ],
+  "broadcasts": [],
+  "botChatLogs": {
+    "user_1779713984314": [],
+    "user_1779713992112": [
+      {
+        "id": "bot-system-1779903407918-0.08282895538698443",
+        "sender": "bot",
+        "text": "📥 Դու Ունես Նոր առաջադրանք!\n\n#FONT_minchev_urbat\n📝: Sarqel fontery idealakan minch urbat\n📅: 29 мая, 17:00\n📎 Ֆայլեր : отсутствуют\n\nՈւսումնասիրի մանրամասները և ուղղարկիր պատրաստի ֆայլը հենց այստեղ",
+        "timestamp": "21:36",
+        "inlineButtons": [
+          {
+            "label": "✅ Կատարված է",
+            "action": "show_completion_form",
+            "payload": "task-1779903407915"
+          }
+        ]
+      },
+      {
+        "id": "tg-auto-1779904939654-user",
+        "sender": "user",
+        "text": "/start",
+        "timestamp": "22:02"
+      },
+      {
+        "id": "tg-auto-1779904939673-bot",
+        "sender": "bot",
+        "text": "Բարև, Alll: Բոտը հաջողությամբ միացված է:",
+        "timestamp": "22:02"
+      },
+      {
+        "id": "tg-auto-1779904944743-user",
+        "sender": "user",
+        "text": "/start",
+        "timestamp": "22:02"
+      },
+      {
+        "id": "tg-auto-1779904944760-bot",
+        "sender": "bot",
+        "text": "Բարև, Alll: Բոտը հաջողությամբ միացված է:",
+        "timestamp": "22:02"
+      },
+      {
+        "id": "tg-auto-1779905579825-user",
+        "sender": "user",
+        "text": "/start",
+        "timestamp": "22:12"
+      },
+      {
+        "id": "tg-auto-1779905582225-bot",
+        "sender": "bot",
+        "text": "Բարև, Alll: Բոտը հաջողությամբ միացված է:",
+        "timestamp": "22:13"
+      },
+      {
+        "id": "tg-auto-1779905595720-user",
+        "sender": "user",
+        "text": "/start",
+        "timestamp": "22:13"
+      },
+      {
+        "id": "tg-auto-1779905606120-bot",
+        "sender": "bot",
+        "text": "Բարև, Alll: Բոտը հաջողությամբ միացված է:",
+        "timestamp": "22:13"
+      },
+      {
+        "id": "tg-auto-1780298232666-user",
+        "sender": "user",
+        "text": "/start",
+        "timestamp": "11:17"
+      },
+      {
+        "id": "tg-auto-1780298232689-bot",
+        "sender": "bot",
+        "text": "Բարև, Alll: Բոտը հաջողությամբ միացված է:",
+        "timestamp": "11:17"
+      }
+    ],
+    "user_1779715341323": [],
+    "user_1779715381041": [
+      {
+        "id": "reminder-1780138824581-user_1779715381041",
+        "sender": "bot",
+        "text": "🔔 ՀԻՇԵՑՈՒՄ (1ժ մնաց)\n\n📌 <b>Նկարել Սերվիսի սթորիները</b>\nCreate, film, or design high-converting stories explaining our key services. Include interactive sti...",
+        "timestamp": "15:00"
+      },
+      {
+        "id": "reminder-1780142424561-user_1779715381041",
+        "sender": "bot",
+        "text": "⏰ ՎԵՐՋՆԱԺԱՄԿԵՏՆ Է!\n\n📌 <b>Նկարել Սերվիսի սթորիները</b>\nCreate, film, or design high-converting stories explaining our key services. Include interactive sti...",
+        "timestamp": "16:00"
+      }
+    ],
+    "user_1779884851526": [
+      {
+        "id": "reminder-1780138824681-user_1779884851526",
+        "sender": "bot",
+        "text": "🔔 ՀԻՇԵՑՈՒՄ (6ժ մնաց)\n\n📌 <b>Նկարել Մարկետինգիները</b>\nShoot video content focusing on our brand's marketing side. This includes brief interviews, behind-t...",
+        "timestamp": "15:00"
+      },
+      {
+        "id": "reminder-1780156867634-user_1779884851526",
+        "sender": "bot",
+        "text": "🔔 ՀԻՇԵՑՈՒՄ (1ժ մնաց)\n\n📌 <b>Նկարել Մարկետինգիները</b>\nShoot video content focusing on our brand's marketing side. This includes brief interviews, behind-t...",
+        "timestamp": "20:01"
+      }
+    ],
+    "user_1448901787": []
+  },
+  "tgBotToken": "8172614863:AAEi0rWYzg5eiP_R6ps9EEIYNY2WmekABA4",
+  "tgChatIds": {
+    "user_1779713984314": "1640876199",
+    "user_1779713992112": "8189992808",
+    "user_1779715341323": "1736129039",
+    "user_1779715381041": "976647155",
+    "user_1779884851526": "504484348",
+    "user_1448901787": "1448901787"
+  },
+  "adminPin": "9999"
+}

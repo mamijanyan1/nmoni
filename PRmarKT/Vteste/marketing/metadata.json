@@ -1,0 +1,8 @@
+{
+  "name": "N Market Queen SMM",
+  "description": "Premium AI Marketing Control Center & SMM Hub for REDstore. Converts campaign ideas, brandbooks, and analytic logs into high-conversion posts, delegate workflows, and visual compliance checks.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
