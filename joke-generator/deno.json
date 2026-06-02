@@ -1,0 +1,11 @@
+{
+  "tasks": {
+    "dev": "deno run --allow-net main.ts",
+    "test": "deno test --allow-net",
+    "lint": "deno lint",
+    "format": "deno fmt"
+  },
+  "imports": {
+    "std/": "https://deno.land/std@0.208.0/"
+  }
+}
