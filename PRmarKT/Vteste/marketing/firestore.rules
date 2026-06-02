@@ -1,15 +1,105 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    // 1. Global Zero-Trust Safety Net
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function memberDoc(workspaceId, uid) {
+      return get(/databases/$(database)/documents/workspaces/$(workspaceId)/members/$(uid));
+    }
+
+    function hasWorkspaceRoleClaim(workspaceId, allowedRoles) {
+      return isSignedIn()
+        && (
+          ("admin" in request.auth.token
+            && request.auth.token.admin == true
+            && "admin" in allowedRoles)
+          || ("workspaceRoles" in request.auth.token
+            && request.auth.token.workspaceRoles is map
+            && workspaceId in request.auth.token.workspaceRoles
+            && request.auth.token.workspaceRoles[workspaceId] in allowedRoles)
+        );
+    }
+
+    function hasWorkspaceRoleDoc(workspaceId, allowedRoles) {
+      return isSignedIn()
+        && exists(/databases/$(database)/documents/workspaces/$(workspaceId)/members/$(request.auth.uid))
+        && memberDoc(workspaceId, request.auth.uid).data.active == true
+        && memberDoc(workspaceId, request.auth.uid).data.role in allowedRoles;
+    }
+
+    function hasWorkspaceRole(workspaceId, allowedRoles) {
+      return hasWorkspaceRoleClaim(workspaceId, allowedRoles)
+        || hasWorkspaceRoleDoc(workspaceId, allowedRoles);
+    }
+
+    function isWorkspaceMember(workspaceId) {
+      return hasWorkspaceRole(workspaceId, ["member", "manager", "admin"]);
+    }
+
+    function isWorkspaceManager(workspaceId) {
+      return hasWorkspaceRole(workspaceId, ["manager", "admin"]);
+    }
+
+    function isWorkspaceAdmin(workspaceId) {
+      return hasWorkspaceRole(workspaceId, ["admin"]);
+    }
+
+    // Global zero-trust safety net.
     match /{document=**} {
       allow read, write: if false;
     }
 
-    // 2. Workspaces matching rule
     match /workspaces/{workspaceId} {
-      // Allow operations if authenticated or if targeting the main shared workspace
-      allow read, write: if request.auth != null || workspaceId == "smm_workspace_main";
+      allow read: if isWorkspaceMember(workspaceId);
+      allow create, update, delete: if isWorkspaceManager(workspaceId);
+
+      // Members may read their own membership profile; managers/admins may read
+      // the full roster. Only admins can change workspace roles.
+      match /members/{memberId} {
+        allow read: if isSignedIn()
+          && (
+            isWorkspaceManager(workspaceId)
+            || (request.auth.uid == memberId && isWorkspaceMember(workspaceId))
+          );
+        allow create, update, delete: if isWorkspaceAdmin(workspaceId);
+      }
+
+      // Operational workspace data is readable by workspace members and writable
+      // by managers/admins.
+      match /tasks/{document=**} {
+        allow read: if isWorkspaceMember(workspaceId);
+        allow write: if isWorkspaceManager(workspaceId);
+      }
+
+      match /campaigns/{document=**} {
+        allow read: if isWorkspaceMember(workspaceId);
+        allow write: if isWorkspaceManager(workspaceId);
+      }
+
+      match /logs/{document=**} {
+        allow read: if isWorkspaceMember(workspaceId);
+        allow write: if isWorkspaceManager(workspaceId);
+      }
+
+      match /files/{document=**} {
+        allow read: if isWorkspaceMember(workspaceId);
+        allow write: if isWorkspaceManager(workspaceId);
+      }
+
+      // Sensitive collections are admin-only for both reads and writes.
+      match /secrets/{document=**} {
+        allow read, write: if isWorkspaceAdmin(workspaceId);
+      }
+
+      match /billing/{document=**} {
+        allow read, write: if isWorkspaceAdmin(workspaceId);
+      }
+
+      match /integrations/{document=**} {
+        allow read, write: if isWorkspaceAdmin(workspaceId);
+      }
     }
   }
 }
